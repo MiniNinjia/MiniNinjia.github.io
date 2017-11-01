@@ -84,10 +84,10 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试题HTML&amp;HTML5&amp;CSS3篇">
 <meta property="og:url" content="https://minininjia.github.io/2017/11/01/面试题-html-css3篇/index.html">
-<meta property="og:site_name" content="胡凯彬的">
+<meta property="og:site_name" content="胡凯彬的博客">
 <meta property="og:description" content="HTML&amp;amp;HTML5篇1、Position属性的值有哪些？怎样使用？    值 描述     absolute 生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。   元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。   fixed 生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 “left”, “t">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-01T12:53:34.504Z">
+<meta property="og:updated_time" content="2017-11-01T13:04:38.745Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试题HTML&amp;HTML5&amp;CSS3篇">
 <meta name="twitter:description" content="HTML&amp;amp;HTML5篇1、Position属性的值有哪些？怎样使用？    值 描述     absolute 生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。   元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。   fixed 生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 “left”, “t">
@@ -126,7 +126,7 @@
 
 
 
-  <title>面试题HTML&HTML5&CSS3篇 | 胡凯彬的</title>
+  <title>面试题HTML&HTML5&CSS3篇 | 胡凯彬的博客</title>
   
 
 
@@ -156,7 +156,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">胡凯彬的</span>
+        <span class="site-title">胡凯彬的博客</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -262,7 +262,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="胡凯彬的">
+      <meta itemprop="name" content="胡凯彬的博客">
     </span>
 
     
@@ -374,7 +374,6 @@
 </tbody>
 </table>
 <p><strong>2、Doctype有什么作用？严格模式与混杂模式有什么区别？</strong></p>
-<blockquote>
 <ul>
 <li><p>作用：</p>
 <pre><code>&lt;!DOCTYPE&gt;声明叫做文件类型定义（DTD），声明的作用为了告诉浏览器该文件的类型。
@@ -391,9 +390,7 @@
 如何区分：浏览器解析时到底使用严格模式还是混杂模式，与网页中的 DTD 直接相关。
 </code></pre></li>
 </ul>
-</blockquote>
 <p><strong>3、常用浏览器的内核有哪些？</strong></p>
-<blockquote>
 <ul>
 <li>Webkit<ul>
 <li>主要有Chrome与Chrome的衍生浏览器、Safari以及多核浏览器</li>
@@ -412,68 +409,52 @@
 </ul>
 </li>
 </ul>
-</blockquote>
 <p><strong>4、什么是CSS Hack，作用是什么？</strong></p>
-<blockquote>
 <pre><code>CSS hack是通过在CSS样式中加入一些特殊的符号，让不同的浏览器识别不同的符号
 (什么样的浏览器识别什么样的符号是有标准的，CSS hack就是让你记住这个标准)，以达到应用不同的CSS样式的目的，
-</code></pre></blockquote>
-<p><strong>5、对W3C标准有哪些认识和理解</strong></p>
-<blockquote>
+</code></pre><p><strong>5、对W3C标准有哪些认识和理解</strong></p>
 <ol>
-<li>对于结构要求：（标签规范可以提高搜索引擎对页面的抓取效率，对SEO很有帮助）<ul>
-<li>标签字母要小写</li>
-<li>标签要闭合</li>
-<li>标签不允许随意嵌套(a标签不要和a标签嵌套，p标签内不能嵌套块级元素，会被解析成兄弟级关系)</li>
-</ul>
-</li>
-<li>对于css和js来说<ul>
-<li>尽量使用外链css样式表和js脚本。是结构、表现和行为分为三块，符合规范。同时提高页面渲染速度，提高用户的体验。</li>
-<li>样式尽量少用行间样式表，使结构与表现分离，标签的id和class等属性命名要做到见文知义，标签越少，加载越快，用户体验提高，代码维护简单，便于改版</li>
-<li>不需要变动页面内容，便可提供打印版本而不需要复制内容，提高网站易用性。</li>
-</ul>
-</li>
+<li>对于结构要求：（标签规范可以提高搜索引擎对页面的抓取效率，对SEO很有帮助）<pre><code>* 标签字母要小写
+* 标签要闭合
+* 标签不允许随意嵌套(a标签不要和a标签嵌套，p标签内不能嵌套块级元素，会被解析成兄弟级关系)
+</code></pre></li>
+<li>对于css和js来说<pre><code>* 尽量使用外链css样式表和js脚本。是结构、表现和行为分为三块，符合规范。同时提高页面渲染速度，提高用户的体验。
+* 样式尽量少用行间样式表，使结构与表现分离，标签的id和class等属性命名要做到见文知义，标签越少，加载越快，用户体验提高，代码维护简单，便于改版
+* 不需要变动页面内容，便可提供打印版本而不需要复制内容，提高网站易用性。
+</code></pre></li>
 </ol>
-</blockquote>
 <p><strong>6、什么是语义化的HTML?</strong></p>
-<blockquote>
 <ol>
 <li>语义化有利于SEO，有利于搜索引擎爬虫更好的理解我们的网页，从而获取更多的有效信息，提升网页的权重。</li>
 <li>在没有CSS的时候能够清晰的看出网页的结构，增强可读性。</li>
 <li>便于团队开发和维护，语义化的HTML可以让开发者更容易的看明白，从而提高团队的效率和协调能力。</li>
 <li>支持多终端设备的浏览器渲染。</li>
 </ol>
-</blockquote>
 <p><strong>7、HTML5为什么只需要写&lt;!DOCTYPE html&gt;就可以了？</strong></p>
-<blockquote>
 <ul>
 <li>HTML5 不基于 SGML，因此不需要对DTD进行引用，但是需要doctype来规范浏览器的行为（让浏览器按照它们应该的方式来运行）；</li>
 <li>而HTML4.01基于SGML,所以需要对DTD进行引用，才能告知浏览器文档所使用的文档类型。</li>
 </ul>
-</blockquote>
 <p><strong>8、HTML5有哪些新特性？移除了哪些元素？如何处理新标签的浏览器兼容性问题？如何区分HTML和HTML5?</strong></p>
-<blockquote>
 <ol>
-<li>新特性<ul>
-<li>绘画canvas</li>
-<li>本地离线存储LocalStorage</li>
-<li>sessionStorage的数据在浏览器关闭后自动删除</li>
-<li>用于媒介回放的 video和 audio 元素</li>
-<li>语意化更好的内容元素，比如article、footer、header、nav、section</li>
-<li>表单控件，calendar、date、time、email、url、search</li>
-<li>新的技术webworker(专用线程)</li>
-<li>websocketsocket通信</li>
-<li>Geolocation 地理定位</li>
-</ul>
-</li>
+<li>新特性<pre><code>* 绘画canvas
+* 本地离线存储LocalStorage
+* sessionStorage的数据在浏览器关闭后自动删除
+* 用于媒介回放的 video和 audio 元素
+* 语意化更好的内容元素，比如article、footer、header、nav、section
+* 表单控件，calendar、date、time、email、url、search
+* 新的技术webworker(专用线程)
+* websocketsocket通信
+* Geolocation 地理定位
+</code></pre></li>
 <li><p>移除的元素</p>
 <ul>
 <li><p>纯表现的元素</p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">1.&lt;basefont&gt; 默认字体，不设置字体，以此渲染</div><div class="line">2.&lt;font&gt; 字体标签</div><div class="line">3.&lt;center&gt; 水平居中</div><div class="line">4.&lt;u&gt; 下划线</div><div class="line">5.&lt;big&gt; 大字体</div><div class="line">6.&lt;strike&gt; 中横线</div><div class="line">7.&lt;tt&gt; 文本等宽</div></pre></td></tr></table></figure>
-</li>
+<pre><code><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">1.&lt;basefont&gt; 默认字体，不设置字体，以此渲染</div><div class="line">2.&lt;font&gt; 字体标签</div><div class="line">3.&lt;center&gt; 水平居中</div><div class="line">4.&lt;u&gt; 下划线</div><div class="line">5.&lt;big&gt; 大字体</div><div class="line">6.&lt;strike&gt; 中横线</div><div class="line">7.&lt;tt&gt; 文本等宽</div></pre></td></tr></table></figure>
+</code></pre></li>
 <li><p>框架集</p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1.&lt;frameset&gt;</div><div class="line">2.&lt;noframes&gt;</div><div class="line">3.&lt;frame&gt;</div></pre></td></tr></table></figure>
-</li>
+<pre><code><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">1.&lt;frameset&gt;</div><div class="line">2.&lt;noframes&gt;</div><div class="line">3.&lt;frame&gt;</div></pre></td></tr></table></figure>
+</code></pre></li>
 </ul>
 </li>
 <li><p>解决兼容性问题</p>
@@ -483,19 +464,14 @@
 </ul>
 </li>
 </ol>
-</blockquote>
 <h1 id="CSS-amp-CSS3篇"><a href="#CSS-amp-CSS3篇" class="headerlink" title="CSS&amp;CSS3篇"></a>CSS&amp;CSS3篇</h1><p><strong>1、如何实现垂直居中？</strong></p>
-<blockquote>
 <ul>
 <li>Flexbox布局</li>
 <li>绝对居中(Absolute Centering)</li>
 <li>transform配合absolute和top，left</li>
 <li>更多内容看<a href="http://blog.csdn.net/freshlover/article/details/11579669" target="_blank" rel="external">这篇博客</a></li>
 </ul>
-</blockquote>
-<p><strong>2、什么是FOUC?如何解决？</strong></p>
-<blockquote>
-<p>  如果使用import方法对CSS进行导入,会导致某些页面在Windows 下的Internet Explorer出现一些奇怪的现象:以无样式显示页面内容的瞬间闪烁,这种现象称之为文档样式短暂失效(Flash of Unstyled Content),简称为FOUC.</p>
+<p><strong>2、什么是FOUC?如何解决？</strong><br>   如果使用import方法对CSS进行导入,会导致某些页面在Windows 下的Internet Explorer出现一些奇怪的现象:以无样式显示页面内容的瞬间闪烁,这种现象称之为文档样式短暂失效(Flash of Unstyled Content),简称为FOUC.</p>
 <p>原因大致为：</p>
 <ol>
 <li>使用import方法导入样式表。</li>
@@ -503,39 +479,33 @@
 <li>有几个样式表，放在html结构的不同位置。其实原理很清楚：当样式表晚于 结构性html 加载，当加载到此样式表时，页面将停止之前的渲染。此样式表被下载和解析后，将重新渲染页面，也就出现了短暂 的 花屏现象。</li>
 </ol>
 <p>解决方法：使用LINK标签将样式表放在文档HEAD中</p>
-</blockquote>
-<p><strong>3、什么是DIV高度塌陷？，如何解决？</strong></p>
-<blockquote>
-<p>在文档流中，父元素的高度默认是被子元素撑开的，也就是子元素多高，父元素就多高。但是当子元素设置浮动之后，子元素会完全脱离文档流，此时将会导致子元素无法撑起父元素的高度，导致父元素的高度塌陷。</p>
+<p><strong>3、什么是DIV高度塌陷？，如何解决？</strong><br>在文档流中，父元素的高度默认是被子元素撑开的，也就是子元素多高，父元素就多高。但是当子元素设置浮动之后，子元素会完全脱离文档流，此时将会导致子元素无法撑起父元素的高度，导致父元素的高度塌陷。</p>
 <p>解决方案：</p>
-<h4 id="1-在高度塌陷的父div里面加一个div：-不推荐"><a href="#1-在高度塌陷的父div里面加一个div：-不推荐" class="headerlink" title="1. 在高度塌陷的父div里面加一个div：(不推荐)"></a>1. 在高度塌陷的父div里面加一个div：(不推荐)</h4>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;a&quot;&gt;</div><div class="line">     &lt;div id=&quot;a1&quot;&gt;&lt;/div&gt;</div><div class="line">     &lt;div id=&quot;a2&quot;&gt;&lt;/div&gt;</div><div class="line">     &lt;div style=&quot;clear: both;&quot;&gt;&lt;/div&gt;//加一个标签，清除浮动</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<h4 id="1-在高度塌陷的父div里面加一个div：-不推荐"><a href="#1-在高度塌陷的父div里面加一个div：-不推荐" class="headerlink" title="1. 在高度塌陷的父div里面加一个div：(不推荐)"></a>1. 在高度塌陷的父div里面加一个div：(不推荐)</h4>   <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;div id=&quot;a&quot;&gt;</div><div class="line">     &lt;div id=&quot;a1&quot;&gt;&lt;/div&gt;</div><div class="line">     &lt;div id=&quot;a2&quot;&gt;&lt;/div&gt;</div><div class="line">     &lt;div style=&quot;clear: both;&quot;&gt;&lt;/div&gt;//加一个标签，清除浮动</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
 <blockquote>
-<pre><code>优点：适合初学者，兼容性 强。 
+<pre><code> 优点：适合初学者，兼容性 强。 
 
 缺点：代码不简练，不利于优化。
 </code></pre></blockquote>
-<h4 id="2-overflow-zoom方法-不推荐，有副作用"><a href="#2-overflow-zoom方法-不推荐，有副作用" class="headerlink" title="2. overflow + zoom方法(不推荐，有副作用)"></a>2. overflow + zoom方法(不推荐，有副作用)</h4>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#a&#123;</div><div class="line">    background: red;</div><div class="line">    /*第二种方法*/</div><div class="line">    overflow: hidden;</div><div class="line">   zoom:1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="2-overflow-zoom方法-不推荐，有副作用"><a href="#2-overflow-zoom方法-不推荐，有副作用" class="headerlink" title="2. overflow + zoom方法(不推荐，有副作用)"></a>2. overflow + zoom方法(不推荐，有副作用)</h4>   <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">#a&#123;</div><div class="line">    background: red;</div><div class="line">    /*第二种方法*/</div><div class="line">    overflow: hidden;</div><div class="line">   zoom:1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <blockquote>
 <pre><code>优点：兼容性强。 
 
 缺点：对margin属性会有影响，不能设负值，会被裁掉。负值绝对定位也不可以。
 </code></pre></blockquote>
-<h4 id="3-after-zoom方法（绝杀"><a href="#3-after-zoom方法（绝杀" class="headerlink" title="3. after + zoom方法（绝杀)"></a>3. after + zoom方法（绝杀)</h4>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#a&#123;</div><div class="line">         background: red;</div><div class="line">         zoom:1;</div><div class="line">    &#125;</div><div class="line">#a:after&#123;</div><div class="line">         display: block;</div><div class="line">         content: &apos;.&apos;;</div><div class="line">         clear: both;</div><div class="line">         line-height: 0;</div><div class="line">         visibility: hidden;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h4 id="3-after-zoom方法（绝杀"><a href="#3-after-zoom方法（绝杀" class="headerlink" title="3. after + zoom方法（绝杀)"></a>3. after + zoom方法（绝杀)</h4>   <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">#a&#123;</div><div class="line">         background: red;</div><div class="line">         zoom:1;</div><div class="line">    &#125;</div><div class="line">#a:after&#123;</div><div class="line">         display: block;</div><div class="line">         content: &apos;.&apos;;</div><div class="line">         clear: both;</div><div class="line">         line-height: 0;</div><div class="line">         visibility: hidden;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <blockquote>
 <pre><code>优点：通用，兼容性强 
 
 缺点：不好记。
 </code></pre></blockquote>
-</blockquote>
 <p><strong>4、如何实现中间div宽度固定，两端div自适应宽度？说出2种方法</strong></p>
-<blockquote>
-<h4 id="1-非CSS3布局，浮动与margin解决"><a href="#1-非CSS3布局，浮动与margin解决" class="headerlink" title="1. 非CSS3布局，浮动与margin解决"></a>1. 非CSS3布局，浮动与margin解决</h4><p>css:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.center &#123;width: 600px; background: yellow;&#125;</div><div class="line">.center,.left,.right &#123; float: left; &#125;</div><div class="line">.left,.right &#123; width: 50%; margin-left: -300px; &#125;</div><div class="line">.inner &#123; padding: 50px;&#125;</div><div class="line">.left .inner,.right .inner &#123; margin-left: 300px; background: red;&#125;</div></pre></td></tr></table></figure></p>
-<p>html:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;left&quot;&gt;</div><div class="line">     &lt;div class=&quot;inner&quot;&gt;left&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;center&quot;&gt;</div><div class="line">    &lt;div class=&quot;inner&quot;&gt;center&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;right&quot;&gt;</div><div class="line">    &lt;div class=&quot;inner&quot;&gt;right&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
-<h4 id="2-非CSS3布局-定位与margin解决"><a href="#2-非CSS3布局-定位与margin解决" class="headerlink" title="2. 非CSS3布局,定位与margin解决"></a>2. 非CSS3布局,定位与margin解决</h4><p>css:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">* &#123; padding: 0; margin: 0;&#125;</div><div class="line">#center &#123; width: 600px; background: red; margin: 0 auto;&#125;</div><div class="line">#left &#123; position: absolute; top: 0; left: 0;width: 50%;&#125;</div><div class="line">#right &#123; position: absolute; top: 0; right: 0; width: 50%;&#125;</div><div class="line">#left div &#123; margin-left: 300px; position: relative; left: -300px; background: lime;&#125;</div><div class="line">#right div &#123; margin-right: 300px; position: relative; left: 300px; background: lime;&#125;</div></pre></td></tr></table></figure></p>
-<p>html:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;left&quot;&gt;</div><div class="line">    &lt;div&gt;left&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div id=&quot;right&quot;&gt;</div><div class="line">    &lt;div&gt;right&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div id=&quot;center&quot;&gt;center&lt;/div&gt;</div></pre></td></tr></table></figure></p>
-<h4 id="3-CSS3布局-推荐，简单"><a href="#3-CSS3布局-推荐，简单" class="headerlink" title="3. CSS3布局(推荐，简单)"></a>3. CSS3布局(推荐，简单)</h4><p>css:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">div[you=me] &#123; display: -webkit-box;&#125;</div><div class="line">div div &#123; background: red; height: 100px;&#125;</div><div class="line">div div:nth-child(1) &#123;-webkit-box-flex:1;&#125;</div><div class="line">div div:nth-child(2) &#123; width: 600px; background: lime&#125;</div><div class="line">div div:nth-child(3) &#123;-webkit-box-flex:1;&#125;</div></pre></td></tr></table></figure></p>
-<p>html:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div you=&quot;me&quot;&gt;</div><div class="line">    &lt;div&gt;left&lt;/div&gt;</div><div class="line">    &lt;div&gt;center&lt;/div&gt;</div><div class="line">    &lt;div&gt;right&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
-</blockquote>
+<h4 id="1-非CSS3布局，浮动与margin解决"><a href="#1-非CSS3布局，浮动与margin解决" class="headerlink" title="1. 非CSS3布局，浮动与margin解决"></a>1. 非CSS3布局，浮动与margin解决</h4><p>css:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">.center &#123;width: 600px; background: yellow;&#125;</div><div class="line">.center,.left,.right &#123; float: left; &#125;</div><div class="line">.left,.right &#123; width: 50%; margin-left: -300px; &#125;</div><div class="line">.inner &#123; padding: 50px;&#125;</div><div class="line">.left .inner,.right .inner &#123; margin-left: 300px; background: red;&#125;</div></pre></td></tr></table></figure></p>
+<p>html:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;div class=&quot;left&quot;&gt;</div><div class="line">     &lt;div class=&quot;inner&quot;&gt;left&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;center&quot;&gt;</div><div class="line">    &lt;div class=&quot;inner&quot;&gt;center&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;right&quot;&gt;</div><div class="line">    &lt;div class=&quot;inner&quot;&gt;right&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<h4 id="2-非CSS3布局-定位与margin解决"><a href="#2-非CSS3布局-定位与margin解决" class="headerlink" title="2. 非CSS3布局,定位与margin解决"></a>2. 非CSS3布局,定位与margin解决</h4><p>css:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">* &#123; padding: 0; margin: 0;&#125;</div><div class="line">#center &#123; width: 600px; background: red; margin: 0 auto;&#125;</div><div class="line">#left &#123; position: absolute; top: 0; left: 0;width: 50%;&#125;</div><div class="line">#right &#123; position: absolute; top: 0; right: 0; width: 50%;&#125;</div><div class="line">#left div &#123; margin-left: 300px; position: relative; left: -300px; background: lime;&#125;</div><div class="line">#right div &#123; margin-right: 300px; position: relative; left: 300px; background: lime;&#125;</div></pre></td></tr></table></figure></p>
+<p>html:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;div id=&quot;left&quot;&gt;</div><div class="line">    &lt;div&gt;left&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div id=&quot;right&quot;&gt;</div><div class="line">    &lt;div&gt;right&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div id=&quot;center&quot;&gt;center&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<h4 id="3-CSS3布局-推荐，简单"><a href="#3-CSS3布局-推荐，简单" class="headerlink" title="3. CSS3布局(推荐，简单)"></a>3. CSS3布局(推荐，简单)</h4><p>css:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">div[you=me] &#123; display: -webkit-box;&#125;</div><div class="line">div div &#123; background: red; height: 100px;&#125;</div><div class="line">div div:nth-child(1) &#123;-webkit-box-flex:1;&#125;</div><div class="line">div div:nth-child(2) &#123; width: 600px; background: lime&#125;</div><div class="line">div div:nth-child(3) &#123;-webkit-box-flex:1;&#125;</div></pre></td></tr></table></figure></p>
+<p>html:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;div you=&quot;me&quot;&gt;</div><div class="line">    &lt;div&gt;left&lt;/div&gt;</div><div class="line">    &lt;div&gt;center&lt;/div&gt;</div><div class="line">    &lt;div&gt;right&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
 
       
     </div>
