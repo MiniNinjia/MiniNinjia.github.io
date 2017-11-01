@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="MyHexo">
 <meta property="og:description" content="HTML&amp;amp;HTML5篇1、Position属性的值有哪些？怎样使用？    值 描述     absolute 生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。   元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。   fixed 生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 “left”, “t">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-01T12:47:08.454Z">
+<meta property="og:updated_time" content="2017-11-01T12:50:27.833Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试题HTML&amp;HTML5&amp;CSS3篇">
 <meta name="twitter:description" content="HTML&amp;amp;HTML5篇1、Position属性的值有哪些？怎样使用？    值 描述     absolute 生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。   元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。   fixed 生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 “left”, “t">
@@ -515,9 +515,6 @@
 缺点：代码不简练，不利于优化。
 </code></pre></blockquote>
 <h4 id="2-overflow-zoom方法-不推荐，有副作用"><a href="#2-overflow-zoom方法-不推荐，有副作用" class="headerlink" title="2. overflow + zoom方法(不推荐，有副作用)"></a>2. overflow + zoom方法(不推荐，有副作用)</h4>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#a&#123;</div><div class="line">    background: red;</div><div class="line">    /*第二种方法*/</div><div class="line">    overflow: hidden;</div><div class="line">   zoom:1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</blockquote>
-<p>&gt;</p>
-<blockquote>
 <blockquote>
 <pre><code>优点：兼容性强。 
 
@@ -535,26 +532,13 @@
 </blockquote>
 <p><strong>4、如何实现中间div宽度固定，两端div自适应宽度？说出2种方法</strong></p>
 <blockquote>
-<h4 id="1-非CSS3布局，浮动与margin解决"><a href="#1-非CSS3布局，浮动与margin解决" class="headerlink" title="1. 非CSS3布局，浮动与margin解决"></a>1. 非CSS3布局，浮动与margin解决</h4><p>css:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.center &#123;width: 600px; background: yellow;&#125;</div><div class="line">.center,.left,.right &#123; float: left; &#125;</div><div class="line">.left,.right &#123; width: 50%; margin-left: -300px; &#125;</div><div class="line">.inner &#123; padding: 50px;&#125;</div><div class="line">.left .inner,.right .inner &#123; margin-left: 300px; background: red;&#125;</div></pre></td></tr></table></figure>
-</blockquote>
-<p>&gt;</p>
-<blockquote>
+<h4 id="1-非CSS3布局，浮动与margin解决"><a href="#1-非CSS3布局，浮动与margin解决" class="headerlink" title="1. 非CSS3布局，浮动与margin解决"></a>1. 非CSS3布局，浮动与margin解决</h4><p>css:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.center &#123;width: 600px; background: yellow;&#125;</div><div class="line">.center,.left,.right &#123; float: left; &#125;</div><div class="line">.left,.right &#123; width: 50%; margin-left: -300px; &#125;</div><div class="line">.inner &#123; padding: 50px;&#125;</div><div class="line">.left .inner,.right .inner &#123; margin-left: 300px; background: red;&#125;</div></pre></td></tr></table></figure></p>
 <p>html:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;left&quot;&gt;</div><div class="line">     &lt;div class=&quot;inner&quot;&gt;left&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;center&quot;&gt;</div><div class="line">    &lt;div class=&quot;inner&quot;&gt;center&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;right&quot;&gt;</div><div class="line">    &lt;div class=&quot;inner&quot;&gt;right&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
-</blockquote>
-<p>&gt;</p>
-<blockquote>
 <h4 id="2-非CSS3布局-定位与margin解决"><a href="#2-非CSS3布局-定位与margin解决" class="headerlink" title="2. 非CSS3布局,定位与margin解决"></a>2. 非CSS3布局,定位与margin解决</h4><p>css:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">* &#123; padding: 0; margin: 0;&#125;</div><div class="line">#center &#123; width: 600px; background: red; margin: 0 auto;&#125;</div><div class="line">#left &#123; position: absolute; top: 0; left: 0;width: 50%;&#125;</div><div class="line">#right &#123; position: absolute; top: 0; right: 0; width: 50%;&#125;</div><div class="line">#left div &#123; margin-left: 300px; position: relative; left: -300px; background: lime;&#125;</div><div class="line">#right div &#123; margin-right: 300px; position: relative; left: 300px; background: lime;&#125;</div></pre></td></tr></table></figure>
-</blockquote>
-<p>&gt;</p>
-<blockquote>
 <p>html:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;left&quot;&gt;</div><div class="line">    &lt;div&gt;left&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div id=&quot;right&quot;&gt;</div><div class="line">    &lt;div&gt;right&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div id=&quot;center&quot;&gt;center&lt;/div&gt;</div></pre></td></tr></table></figure>
-</blockquote>
-<p>&gt;</p>
-<blockquote>
 <h4 id="3-CSS3布局-推荐，简单"><a href="#3-CSS3布局-推荐，简单" class="headerlink" title="3. CSS3布局(推荐，简单)"></a>3. CSS3布局(推荐，简单)</h4><p>css:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">div[you=me] &#123; display: -webkit-box;&#125;</div><div class="line">div div &#123; background: red; height: 100px;&#125;</div><div class="line">div div:nth-child(1) &#123;-webkit-box-flex:1;&#125;</div><div class="line">div div:nth-child(2) &#123; width: 600px; background: lime&#125;</div><div class="line">div div:nth-child(3) &#123;-webkit-box-flex:1;&#125;</div></pre></td></tr></table></figure></p>
 <p>html:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div you=&quot;me&quot;&gt;</div><div class="line">    &lt;div&gt;left&lt;/div&gt;</div><div class="line">    &lt;div&gt;center&lt;/div&gt;</div><div class="line">    &lt;div&gt;right&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
 </blockquote>
