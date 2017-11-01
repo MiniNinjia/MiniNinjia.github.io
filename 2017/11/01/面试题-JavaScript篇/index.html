@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="胡凯彬的博客">
 <meta property="og:description" content="1. 介绍一下JS的基本数据类型？ Undefined Null Boolean Number String2. 谈谈对this的理解。this表示当前对象，this的指向是根据调用的上下文来决定的，默认指向window对象，指向window对象时可以省略不写。 全局变量 全局环境就是在里面，这里的this始终指向的是window对象，   局部环境  在全局作用域下直接调用函数，this指向wi">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-01T14:28:59.590Z">
+<meta property="og:updated_time" content="2017-11-01T14:33:32.103Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试题-JavaScript篇">
 <meta name="twitter:description" content="1. 介绍一下JS的基本数据类型？ Undefined Null Boolean Number String2. 谈谈对this的理解。this表示当前对象，this的指向是根据调用的上下文来决定的，默认指向window对象，指向window对象时可以省略不写。 全局变量 全局环境就是在里面，这里的this始终指向的是window对象，   局部环境  在全局作用域下直接调用函数，this指向wi">
@@ -358,20 +358,25 @@
  <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">function func()&#123;  </div><div class="line">    console.log(this) ;//this指向的还是window对象  </div><div class="line">&#125;  </div><div class="line">func();</div></pre></td></tr></table></figure>
 </li>
 <li><p>对象函数调用，哪个对象调用就指向哪个对象</p>
- <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">        &lt;input type=&quot;button&quot;id=&quot;btnOK&quot; value=&quot;OK&quot;&gt;  </div><div class="line">        &lt;script&gt;  </div><div class="line">            varbtnOK=document.getElementById(&quot;btnOK&quot;) </div><div class="line">            btnOK.onclick=function()&#123;  </div><div class="line">            console.log(this);//this指向的是btnOK对象  </div><div class="line">            &#125;  </div><div class="line">        &lt;/script&gt;</div><div class="line"></div><div class="line">    ``` </div><div class="line"></div><div class="line">3. 使用 new 实例化对象，在构造函数中的this指向实例化对象。</div></pre></td></tr></table></figure>
-<pre><code>var Show=function(){  
-    this.myName=&quot;Mr.Cao&quot;;   //这里的this指向的是obj对象  
+ <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">        &lt;input type=&quot;button&quot;id=&quot;btnOK&quot; value=&quot;OK&quot;&gt;  </div><div class="line">        &lt;script&gt;  </div><div class="line">            varbtnOK=document.getElementById(&quot;btnOK&quot;) </div><div class="line">            btnOK.onclick=function()&#123;  </div><div class="line">            console.log(this);</div><div class="line">            /* this指向的是btnOK对象   */</div><div class="line">            &#125;  </div><div class="line">        &lt;/script&gt;</div><div class="line">    ``` </div><div class="line"></div><div class="line">3. 使用 new 实例化对象，在构造函数中的this指向实例化对象。</div></pre></td></tr></table></figure>
+<pre><code>&lt;script&gt;
+var Show=function(){  
+    this.myName=&quot;Mr.Cao&quot;;   
+    &lt;!-- 这里的this指向的是obj对象   --&gt;
 }  
 var obj=new Show(); 
+&lt;/script&gt;
 </code></pre> <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line"></div><div class="line">4. 使用call或apply改变this的指向</div></pre></td></tr></table></figure>
 <pre><code>var Go=function(){  
     this.address=&quot;深圳&quot;;  
 }  
 var Show=function(){  
-    console.log(this.address);//输出 深圳  
+    console.log(this.address);
+    &lt;!-- 输出 深圳   --&gt;
 }  
 var go=new Go();  
-Show.call(go);//改变Show方法的this指向go对象 
+Show.call(go);
+&lt;!-- 改变Show方法的this指向go对象  --&gt;
 </code></pre> <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line"></div><div class="line">* 加分项</div><div class="line">    1.  用于区分全局变量和局部变量，需要使用this</div></pre></td></tr></table></figure>
 <pre><code>var age=20;  
 function show(age){  
