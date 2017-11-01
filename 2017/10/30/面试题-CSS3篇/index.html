@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="CSS&amp;amp;CSS3篇1. 如何实现垂直居中？ Flexbox布局 绝对居中(Absolute Centering) transform配合absolute和top，left 更多内容看这篇博客  2. 什么是FOUC?如何解决？   如果使用import方法对CSS进行导入,会导致某些页面在Windows 下的Internet Explorer出现一些奇怪的现象:以无样式显示页面内容的瞬间闪">
+<meta name="description" content="1. 如何实现垂直居中？ Flexbox布局 绝对居中(Absolute Centering) transform配合absolute和top，left 更多内容看这篇博客  2. 什么是FOUC?如何解决？   如果使用import方法对CSS进行导入,会导致某些页面在Windows 下的Internet Explorer出现一些奇怪的现象:以无样式显示页面内容的瞬间闪烁,这种现象称之为文档样式">
 <meta name="keywords" content="CSS3,面试题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试题-CSS3">
 <meta property="og:url" content="https://minininjia.github.io/2017/10/30/面试题-CSS3篇/index.html">
 <meta property="og:site_name" content="胡凯彬的博客">
-<meta property="og:description" content="CSS&amp;amp;CSS3篇1. 如何实现垂直居中？ Flexbox布局 绝对居中(Absolute Centering) transform配合absolute和top，left 更多内容看这篇博客  2. 什么是FOUC?如何解决？   如果使用import方法对CSS进行导入,会导致某些页面在Windows 下的Internet Explorer出现一些奇怪的现象:以无样式显示页面内容的瞬间闪">
+<meta property="og:description" content="1. 如何实现垂直居中？ Flexbox布局 绝对居中(Absolute Centering) transform配合absolute和top，left 更多内容看这篇博客  2. 什么是FOUC?如何解决？   如果使用import方法对CSS进行导入,会导致某些页面在Windows 下的Internet Explorer出现一些奇怪的现象:以无样式显示页面内容的瞬间闪烁,这种现象称之为文档样式">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-01T13:38:56.590Z">
+<meta property="og:updated_time" content="2017-11-01T14:25:46.389Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试题-CSS3">
-<meta name="twitter:description" content="CSS&amp;amp;CSS3篇1. 如何实现垂直居中？ Flexbox布局 绝对居中(Absolute Centering) transform配合absolute和top，left 更多内容看这篇博客  2. 什么是FOUC?如何解决？   如果使用import方法对CSS进行导入,会导致某些页面在Windows 下的Internet Explorer出现一些奇怪的现象:以无样式显示页面内容的瞬间闪">
+<meta name="twitter:description" content="1. 如何实现垂直居中？ Flexbox布局 绝对居中(Absolute Centering) transform配合absolute和top，left 更多内容看这篇博客  2. 什么是FOUC?如何解决？   如果使用import方法对CSS进行导入,会导致某些页面在Windows 下的Internet Explorer出现一些奇怪的现象:以无样式显示页面内容的瞬间闪烁,这种现象称之为文档样式">
 
 
 
@@ -342,7 +342,7 @@
       
 
       
-        <h1 id="CSS-amp-CSS3篇"><a href="#CSS-amp-CSS3篇" class="headerlink" title="CSS&amp;CSS3篇"></a>CSS&amp;CSS3篇</h1><h2 id="1-如何实现垂直居中？"><a href="#1-如何实现垂直居中？" class="headerlink" title="1. 如何实现垂直居中？"></a>1. 如何实现垂直居中？</h2><ul>
+        <h2 id="1-如何实现垂直居中？"><a href="#1-如何实现垂直居中？" class="headerlink" title="1. 如何实现垂直居中？"></a>1. 如何实现垂直居中？</h2><ul>
 <li>Flexbox布局</li>
 <li>绝对居中(Absolute Centering)</li>
 <li>transform配合absolute和top，left</li>
@@ -567,7 +567,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-amp-CSS3篇"><span class="nav-number">1.</span> <span class="nav-text">CSS&CSS3篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-如何实现垂直居中？"><span class="nav-number">1.1.</span> <span class="nav-text">1. 如何实现垂直居中？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-什么是FOUC-如何解决？"><span class="nav-number">1.2.</span> <span class="nav-text">2. 什么是FOUC?如何解决？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-什么是DIV高度塌陷？，如何解决？"><span class="nav-number">1.3.</span> <span class="nav-text">3.什么是DIV高度塌陷？，如何解决？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-在高度塌陷的父div里面加一个div：-不推荐"><span class="nav-number">1.3.1.</span> <span class="nav-text">1. 在高度塌陷的父div里面加一个div：(不推荐)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-overflow-zoom方法-不推荐，有副作用"><span class="nav-number">1.3.2.</span> <span class="nav-text">2. overflow + zoom方法(不推荐，有副作用)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-after-zoom方法（绝杀"><span class="nav-number">1.3.3.</span> <span class="nav-text">3. after + zoom方法（绝杀)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-如何实现中间div宽度固定，两端div自适应宽度？说出2种方法"><span class="nav-number">1.4.</span> <span class="nav-text">4. 如何实现中间div宽度固定，两端div自适应宽度？说出2种方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-非CSS3布局，浮动与margin解决"><span class="nav-number">1.4.1.</span> <span class="nav-text">1. 非CSS3布局，浮动与margin解决</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-非CSS3布局-定位与margin解决"><span class="nav-number">1.4.2.</span> <span class="nav-text">2. 非CSS3布局,定位与margin解决</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-CSS3布局-注意兼容性"><span class="nav-number">1.4.3.</span> <span class="nav-text">3. CSS3布局(注意兼容性)</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-如何实现垂直居中？"><span class="nav-number">1.</span> <span class="nav-text">1. 如何实现垂直居中？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-什么是FOUC-如何解决？"><span class="nav-number">2.</span> <span class="nav-text">2. 什么是FOUC?如何解决？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-什么是DIV高度塌陷？，如何解决？"><span class="nav-number">3.</span> <span class="nav-text">3.什么是DIV高度塌陷？，如何解决？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-在高度塌陷的父div里面加一个div：-不推荐"><span class="nav-number">3.1.</span> <span class="nav-text">1. 在高度塌陷的父div里面加一个div：(不推荐)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-overflow-zoom方法-不推荐，有副作用"><span class="nav-number">3.2.</span> <span class="nav-text">2. overflow + zoom方法(不推荐，有副作用)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-after-zoom方法（绝杀"><span class="nav-number">3.3.</span> <span class="nav-text">3. after + zoom方法（绝杀)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-如何实现中间div宽度固定，两端div自适应宽度？说出2种方法"><span class="nav-number">4.</span> <span class="nav-text">4. 如何实现中间div宽度固定，两端div自适应宽度？说出2种方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-非CSS3布局，浮动与margin解决"><span class="nav-number">4.1.</span> <span class="nav-text">1. 非CSS3布局，浮动与margin解决</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-非CSS3布局-定位与margin解决"><span class="nav-number">4.2.</span> <span class="nav-text">2. 非CSS3布局,定位与margin解决</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-CSS3布局-注意兼容性"><span class="nav-number">4.3.</span> <span class="nav-text">3. CSS3布局(注意兼容性)</span></a></li></ol></li></ol></div>
             
 
           </div>
