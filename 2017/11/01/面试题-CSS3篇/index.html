@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="面试题,CSS3," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="CSS&amp;amp;CSS3篇1. 如何实现垂直居中？ Flexbox布局 绝对居中(Absolute Centering) transform配合absolute和top，left 更多内容看这篇博客  2. 什么是FOUC?如何解决？   如果使用import方法对CSS进行导入,会导致某些页面在Windows 下的Internet Explorer出现一些奇怪的现象:以无样式显示页面内容的瞬间闪">
+<meta name="keywords" content="面试题,CSS3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试题-CSS3">
+<meta property="og:url" content="https://minininjia.github.io/2017/11/01/面试题-CSS3篇/index.html">
+<meta property="og:site_name" content="胡凯彬的博客">
+<meta property="og:description" content="CSS&amp;amp;CSS3篇1. 如何实现垂直居中？ Flexbox布局 绝对居中(Absolute Centering) transform配合absolute和top，left 更多内容看这篇博客  2. 什么是FOUC?如何解决？   如果使用import方法对CSS进行导入,会导致某些页面在Windows 下的Internet Explorer出现一些奇怪的现象:以无样式显示页面内容的瞬间闪">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-01T13:27:50.752Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面试题-CSS3">
+<meta name="twitter:description" content="CSS&amp;amp;CSS3篇1. 如何实现垂直居中？ Flexbox布局 绝对居中(Absolute Centering) transform配合absolute和top，left 更多内容看这篇博客  2. 什么是FOUC?如何解决？   如果使用import方法对CSS进行导入,会导致某些页面在Windows 下的Internet Explorer出现一些奇怪的现象:以无样式显示页面内容的瞬间闪">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://minininjia.github.io/2017/11/01/面试题-CSS3篇/"/>
+
+
+
+
+
+  <title>面试题-CSS3 | 胡凯彬的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">胡凯彬的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://minininjia.github.io/2017/11/01/面试题-CSS3篇/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="胡凯彬">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="胡凯彬的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">面试题-CSS3</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-01T21:22:58+08:00">
+                2017-11-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS3/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS3</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="CSS-amp-CSS3篇"><a href="#CSS-amp-CSS3篇" class="headerlink" title="CSS&amp;CSS3篇"></a>CSS&amp;CSS3篇</h1><h2 id="1-如何实现垂直居中？"><a href="#1-如何实现垂直居中？" class="headerlink" title="1. 如何实现垂直居中？"></a>1. 如何实现垂直居中？</h2><ul>
+<li>Flexbox布局</li>
+<li>绝对居中(Absolute Centering)</li>
+<li>transform配合absolute和top，left</li>
+<li>更多内容看<a href="http://blog.csdn.net/freshlover/article/details/11579669" target="_blank" rel="external">这篇博客</a></li>
+</ul>
+<h2 id="2-什么是FOUC-如何解决？"><a href="#2-什么是FOUC-如何解决？" class="headerlink" title="2. 什么是FOUC?如何解决？"></a>2. 什么是FOUC?如何解决？</h2><p>   如果使用import方法对CSS进行导入,会导致某些页面在Windows 下的Internet Explorer出现一些奇怪的现象:以无样式显示页面内容的瞬间闪烁,这种现象称之为文档样式短暂失效(Flash of Unstyled Content),简称为FOUC.</p>
+<pre><code>原因大致为：
+1. 使用import方法导入样式表。
+2. 将样式表放在页面底部
+3. 有几个样式表，放在html结构的不同位置。其实原理很清楚：当样式表晚于 结构性html 加载，当加载到此样式表时，页面将停止之前的渲染。此样式表被下载和解析后，将重新渲染页面，也就出现了短暂 的 花屏现象。
+
+解决方法：使用LINK标签将样式表放在文档HEAD中
+</code></pre><h2 id="3-什么是DIV高度塌陷？，如何解决？"><a href="#3-什么是DIV高度塌陷？，如何解决？" class="headerlink" title="3.什么是DIV高度塌陷？，如何解决？"></a>3.什么是DIV高度塌陷？，如何解决？</h2><p>在文档流中，父元素的高度默认是被子元素撑开的，也就是子元素多高，父元素就多高。但是当子元素设置浮动之后，子元素会完全脱离文档流，此时将会导致子元素无法撑起父元素的高度，导致父元素的高度塌陷。</p>
+<p>解决方案：</p>
+<h3 id="1-在高度塌陷的父div里面加一个div：-不推荐"><a href="#1-在高度塌陷的父div里面加一个div：-不推荐" class="headerlink" title="1. 在高度塌陷的父div里面加一个div：(不推荐)"></a>1. 在高度塌陷的父div里面加一个div：(不推荐)</h3>   <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;div id=&quot;a&quot;&gt;</div><div class="line">     &lt;div id=&quot;a1&quot;&gt;&lt;/div&gt;</div><div class="line">     &lt;div id=&quot;a2&quot;&gt;&lt;/div&gt;</div><div class="line">     &lt;div style=&quot;clear: both;&quot;&gt;&lt;/div&gt;//加一个标签，清除浮动</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<pre><code> 优点：适合初学者，兼容性 强。 
+
+缺点：代码不简练，不利于优化。
+</code></pre></blockquote>
+<h3 id="2-overflow-zoom方法-不推荐，有副作用"><a href="#2-overflow-zoom方法-不推荐，有副作用" class="headerlink" title="2. overflow + zoom方法(不推荐，有副作用)"></a>2. overflow + zoom方法(不推荐，有副作用)</h3>   <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">#a&#123;</div><div class="line">    background: red;</div><div class="line">    /*第二种方法*/</div><div class="line">    overflow: hidden;</div><div class="line">   zoom:1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<pre><code>优点：兼容性强。 
+
+缺点：对margin属性会有影响，不能设负值，会被裁掉。负值绝对定位也不可以。
+</code></pre></blockquote>
+<h3 id="3-after-zoom方法（绝杀"><a href="#3-after-zoom方法（绝杀" class="headerlink" title="3. after + zoom方法（绝杀)"></a>3. after + zoom方法（绝杀)</h3>   <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">#a&#123;</div><div class="line">         background: red;</div><div class="line">         zoom:1;</div><div class="line">    &#125;</div><div class="line">#a:after&#123;</div><div class="line">         display: block;</div><div class="line">         content: &apos;.&apos;;</div><div class="line">         clear: both;</div><div class="line">         line-height: 0;</div><div class="line">         visibility: hidden;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<pre><code>优点：通用，兼容性强 
+
+缺点：不好记。
+</code></pre></blockquote>
+<h2 id="4-如何实现中间div宽度固定，两端div自适应宽度？说出2种方法"><a href="#4-如何实现中间div宽度固定，两端div自适应宽度？说出2种方法" class="headerlink" title="4. 如何实现中间div宽度固定，两端div自适应宽度？说出2种方法"></a>4. 如何实现中间div宽度固定，两端div自适应宽度？说出2种方法</h2><h3 id="1-非CSS3布局，浮动与margin解决"><a href="#1-非CSS3布局，浮动与margin解决" class="headerlink" title="1. 非CSS3布局，浮动与margin解决"></a>1. 非CSS3布局，浮动与margin解决</h3><p>css:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">.center &#123;width: 600px; background: yellow;&#125;</div><div class="line">.center,.left,.right &#123; float: left; &#125;</div><div class="line">.left,.right &#123; width: 50%; margin-left: -300px; &#125;</div><div class="line">.inner &#123; padding: 50px;&#125;</div><div class="line">.left .inner,.right .inner &#123; margin-left: 300px; background: red;&#125;</div></pre></td></tr></table></figure></p>
+<p>html:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;div class=&quot;left&quot;&gt;</div><div class="line">     &lt;div class=&quot;inner&quot;&gt;left&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;center&quot;&gt;</div><div class="line">    &lt;div class=&quot;inner&quot;&gt;center&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;right&quot;&gt;</div><div class="line">    &lt;div class=&quot;inner&quot;&gt;right&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="2-非CSS3布局-定位与margin解决"><a href="#2-非CSS3布局-定位与margin解决" class="headerlink" title="2. 非CSS3布局,定位与margin解决"></a>2. 非CSS3布局,定位与margin解决</h3><p>css:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">* &#123; padding: 0; margin: 0;&#125;</div><div class="line">#center &#123; width: 600px; background: red; margin: 0 auto;&#125;</div><div class="line">#left &#123; position: absolute; top: 0; left: 0;width: 50%;&#125;</div><div class="line">#right &#123; position: absolute; top: 0; right: 0; width: 50%;&#125;</div><div class="line">#left div &#123; margin-left: 300px; position: relative; left: -300px; background: lime;&#125;</div><div class="line">#right div &#123; margin-right: 300px; position: relative; left: 300px; background: lime;&#125;</div></pre></td></tr></table></figure></p>
+<p>html:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;div id=&quot;left&quot;&gt;</div><div class="line">    &lt;div&gt;left&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div id=&quot;right&quot;&gt;</div><div class="line">    &lt;div&gt;right&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div id=&quot;center&quot;&gt;center&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="3-CSS3布局-注意兼容性"><a href="#3-CSS3布局-注意兼容性" class="headerlink" title="3. CSS3布局(注意兼容性)"></a>3. CSS3布局(注意兼容性)</h3><p>css:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">div[you=me] &#123; display: -webkit-box;&#125;</div><div class="line">div div &#123; background: red; height: 100px;&#125;</div><div class="line">div div:nth-child(1) &#123;-webkit-box-flex:1;&#125;</div><div class="line">div div:nth-child(2) &#123; width: 600px; background: lime&#125;</div><div class="line">div div:nth-child(3) &#123;-webkit-box-flex:1;&#125;</div></pre></td></tr></table></figure></p>
+<p>html:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;div you=&quot;me&quot;&gt;</div><div class="line">    &lt;div&gt;left&lt;/div&gt;</div><div class="line">    &lt;div&gt;center&lt;/div&gt;</div><div class="line">    &lt;div&gt;right&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/面试题/" rel="tag"># 面试题</a>
+          
+            <a href="/tags/CSS3/" rel="tag"># CSS3</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/01/面试题-HTML5篇/" rel="next" title="面试题HTML&HTML5篇">
+                <i class="fa fa-chevron-left"></i> 面试题HTML&HTML5篇
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">胡凯彬</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/MiniNinjia" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-amp-CSS3篇"><span class="nav-number">1.</span> <span class="nav-text">CSS&CSS3篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-如何实现垂直居中？"><span class="nav-number">1.1.</span> <span class="nav-text">1. 如何实现垂直居中？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-什么是FOUC-如何解决？"><span class="nav-number">1.2.</span> <span class="nav-text">2. 什么是FOUC?如何解决？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-什么是DIV高度塌陷？，如何解决？"><span class="nav-number">1.3.</span> <span class="nav-text">3.什么是DIV高度塌陷？，如何解决？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-在高度塌陷的父div里面加一个div：-不推荐"><span class="nav-number">1.3.1.</span> <span class="nav-text">1. 在高度塌陷的父div里面加一个div：(不推荐)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-overflow-zoom方法-不推荐，有副作用"><span class="nav-number">1.3.2.</span> <span class="nav-text">2. overflow + zoom方法(不推荐，有副作用)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-after-zoom方法（绝杀"><span class="nav-number">1.3.3.</span> <span class="nav-text">3. after + zoom方法（绝杀)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-如何实现中间div宽度固定，两端div自适应宽度？说出2种方法"><span class="nav-number">1.4.</span> <span class="nav-text">4. 如何实现中间div宽度固定，两端div自适应宽度？说出2种方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-非CSS3布局，浮动与margin解决"><span class="nav-number">1.4.1.</span> <span class="nav-text">1. 非CSS3布局，浮动与margin解决</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-非CSS3布局-定位与margin解决"><span class="nav-number">1.4.2.</span> <span class="nav-text">2. 非CSS3布局,定位与margin解决</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-CSS3布局-注意兼容性"><span class="nav-number">1.4.3.</span> <span class="nav-text">3. CSS3布局(注意兼容性)</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">胡凯彬</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
