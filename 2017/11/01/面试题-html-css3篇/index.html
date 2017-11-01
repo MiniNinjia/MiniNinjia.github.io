@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="MyHexo">
 <meta property="og:description" content="HTML&amp;amp;HTML5篇1、Position属性的值有哪些？怎样使用？    值 描述     absolute 生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。   元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。   fixed 生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 “left”, “t">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-01T12:52:24.351Z">
+<meta property="og:updated_time" content="2017-11-01T12:53:34.504Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试题HTML&amp;HTML5&amp;CSS3篇">
 <meta name="twitter:description" content="HTML&amp;amp;HTML5篇1、Position属性的值有哪些？怎样使用？    值 描述     absolute 生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。   元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。   fixed 生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 “left”, “t">
@@ -521,9 +521,6 @@
 缺点：对margin属性会有影响，不能设负值，会被裁掉。负值绝对定位也不可以。
 </code></pre></blockquote>
 <h4 id="3-after-zoom方法（绝杀"><a href="#3-after-zoom方法（绝杀" class="headerlink" title="3. after + zoom方法（绝杀)"></a>3. after + zoom方法（绝杀)</h4>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#a&#123;</div><div class="line">         background: red;</div><div class="line">         zoom:1;</div><div class="line">    &#125;</div><div class="line">#a:after&#123;</div><div class="line">         display: block;</div><div class="line">         content: &apos;.&apos;;</div><div class="line">         clear: both;</div><div class="line">         line-height: 0;</div><div class="line">         visibility: hidden;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-</blockquote>
-<p>&gt;</p>
-<blockquote>
 <blockquote>
 <pre><code>优点：通用，兼容性强 
 
