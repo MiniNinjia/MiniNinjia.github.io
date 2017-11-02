@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="胡凯彬的博客">
 <meta property="og:description" content="介绍一下JS的基本数据类型？ Undefined Null Boolean Number String  谈谈对this的理解。this表示当前对象，this的指向是根据调用的上下文来决定的，默认指向window对象，指向window对象时可以省略不写。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-02T02:02:10.762Z">
+<meta property="og:updated_time" content="2017-11-02T02:37:41.886Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试题-JavaScript篇">
 <meta name="twitter:description" content="介绍一下JS的基本数据类型？ Undefined Null Boolean Number String  谈谈对this的理解。this表示当前对象，this的指向是根据调用的上下文来决定的，默认指向window对象，指向window对象时可以省略不写。">
@@ -372,13 +372,19 @@
 <li><p>使用call或apply改变this的指向</p>
 <pre><code><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">var Go=function()&#123;  </div><div class="line">    this.address=&quot;深圳&quot;;  </div><div class="line">&#125;  </div><div class="line">var Show=function()&#123;  </div><div class="line">    console.log(this.address);</div><div class="line">    &lt;!-- 输出 深圳   --&gt;</div><div class="line">&#125;  </div><div class="line">var go=new Go();  </div><div class="line">Show.call(go);</div><div class="line">&lt;!-- 改变Show方法的this指向go对象  --&gt;</div></pre></td></tr></table></figure>
 </code></pre><!--more-->
-<h2 id="加分项"><a href="#加分项" class="headerlink" title="加分项"></a>加分项</h2><!--more--></li>
+</li>
+</ol>
+<h2 id="加分项"><a href="#加分项" class="headerlink" title="加分项"></a>加分项</h2><!--more-->
+<ol>
 <li><p>用于区分全局变量和局部变量，需要使用this</p>
 <pre><code><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">var age=20;  </div><div class="line">function show(age)&#123;  </div><div class="line">    this.age=age;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </code></pre><!--more-->  
 </li>
 <li><p>返回函数当前的对象，jquery。</p>
-<!--more--></li>
+</li>
+</ol>
+<!--more-->
+<ol>
 <li><p>将当前的对象传递到下一个函数，看jquery1.8.3源码。</p>
 <pre><code><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">each:function(callback,args)&#123;</div><div class="line">    return jQuery.each(this,callback,args);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </code></pre><!--more-->
