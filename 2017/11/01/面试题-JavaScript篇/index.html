@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="1.介绍一下JS的基本数据类型？">
+<meta name="description" content="介绍一下JS的基本数据类型？">
 <meta name="keywords" content="面试题,JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试题-JavaScript篇">
 <meta property="og:url" content="https://minininjia.github.io/2017/11/01/面试题-JavaScript篇/index.html">
 <meta property="og:site_name" content="胡凯彬的博客">
-<meta property="og:description" content="1.介绍一下JS的基本数据类型？">
+<meta property="og:description" content="介绍一下JS的基本数据类型？">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-02T01:51:12.600Z">
+<meta property="og:updated_time" content="2017-11-02T01:56:18.855Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试题-JavaScript篇">
-<meta name="twitter:description" content="1.介绍一下JS的基本数据类型？">
+<meta name="twitter:description" content="介绍一下JS的基本数据类型？">
 
 
 
@@ -342,22 +342,22 @@
       
 
       
-        <h2 id="1-介绍一下JS的基本数据类型？"><a href="#1-介绍一下JS的基本数据类型？" class="headerlink" title="1.介绍一下JS的基本数据类型？"></a>1.介绍一下JS的基本数据类型？</h2><a id="more"></a>
+        <h1 id="介绍一下JS的基本数据类型？"><a href="#介绍一下JS的基本数据类型？" class="headerlink" title="介绍一下JS的基本数据类型？"></a>介绍一下JS的基本数据类型？</h1><a id="more"></a>
 <ul>
 <li>Undefined</li>
 <li>Null</li>
 <li>Boolean</li>
 <li>Number</li>
 <li>String<!--more-->
-<h2 id="2-谈谈对this的理解。"><a href="#2-谈谈对this的理解。" class="headerlink" title="2.谈谈对this的理解。"></a>2.谈谈对this的理解。</h2><!--more-->
+<h1 id="谈谈对this的理解。"><a href="#谈谈对this的理解。" class="headerlink" title="谈谈对this的理解。"></a>谈谈对this的理解。</h1><!--more-->
 this表示当前对象，this的指向是根据调用的上下文来决定的，默认指向window对象，指向window对象时可以省略不写。<!--more-->
-<h4 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h4><!--more--></li>
+<h2 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h2><!--more--></li>
 </ul>
 <ol>
 <li>全局环境就是在<script></script>里面，这里的this始终指向的是window对象， <!--more-->
 </li>
 </ol>
-<h4 id="局部环境"><a href="#局部环境" class="headerlink" title="局部环境"></a>局部环境</h4><!--more-->
+<h2 id="局部环境"><a href="#局部环境" class="headerlink" title="局部环境"></a>局部环境</h2><!--more-->
 <ol>
 <li><p>在全局作用域下直接调用函数，this指向window</p>
 <pre><code><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">function func()&#123;  </div><div class="line">    console.log(this) ;//this指向的还是window对象  </div><div class="line">&#125;  </div><div class="line">func();</div></pre></td></tr></table></figure>
@@ -374,10 +374,7 @@ this表示当前对象，this的指向是根据调用的上下文来决定的，
 <li><p>使用call或apply改变this的指向</p>
 <pre><code><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">var Go=function()&#123;  </div><div class="line">    this.address=&quot;深圳&quot;;  </div><div class="line">&#125;  </div><div class="line">var Show=function()&#123;  </div><div class="line">    console.log(this.address);</div><div class="line">    &lt;!-- 输出 深圳   --&gt;</div><div class="line">&#125;  </div><div class="line">var go=new Go();  </div><div class="line">Show.call(go);</div><div class="line">&lt;!-- 改变Show方法的this指向go对象  --&gt;</div></pre></td></tr></table></figure>
 </code></pre><!--more-->
-</li>
-</ol>
-<h4 id="加分项"><a href="#加分项" class="headerlink" title="加分项"></a>加分项</h4><!--more-->
-<ol>
+<h2 id="加分项"><a href="#加分项" class="headerlink" title="加分项"></a>加分项</h2><!--more--></li>
 <li><p>用于区分全局变量和局部变量，需要使用this</p>
 <pre><code><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">var age=20;  </div><div class="line">function show(age)&#123;  </div><div class="line">    this.age=age;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </code></pre><!--more-->  
@@ -389,30 +386,30 @@ this表示当前对象，this的指向是根据调用的上下文来决定的，
 </code></pre><!--more-->
 </li>
 </ol>
-<h2 id="3-如何判断一个对象是否属于某个类？"><a href="#3-如何判断一个对象是否属于某个类？" class="headerlink" title="3.如何判断一个对象是否属于某个类？"></a>3.如何判断一个对象是否属于某个类？</h2><!--more-->
-<h2 id="4-什么是闭包？为什么要用它？"><a href="#4-什么是闭包？为什么要用它？" class="headerlink" title="4.什么是闭包？为什么要用它？"></a>4.什么是闭包？为什么要用它？</h2><!--more-->
-<h2 id="5-Js代码开头的use-strict是什么意思？"><a href="#5-Js代码开头的use-strict是什么意思？" class="headerlink" title="5.Js代码开头的use strict是什么意思？"></a>5.Js代码开头的use strict是什么意思？</h2><!--more-->
-<h2 id="6-Ajax有哪些方法？"><a href="#6-Ajax有哪些方法？" class="headerlink" title="6.Ajax有哪些方法？"></a>6.Ajax有哪些方法？</h2><!--more-->
-<h2 id="7-如何实现继承？"><a href="#7-如何实现继承？" class="headerlink" title="7.如何实现继承？"></a>7.如何实现继承？</h2><!--more-->
-<h2 id="8-如何判断数据的类型？"><a href="#8-如何判断数据的类型？" class="headerlink" title="8.如何判断数据的类型？"></a>8.如何判断数据的类型？</h2><!--more-->
-<h2 id="9-解释一下-和-的区别"><a href="#9-解释一下-和-的区别" class="headerlink" title="9.解释一下==和===的区别"></a>9.解释一下==和===的区别</h2><!--more-->
-<h2 id="10-什么是事件冒泡？如何阻止？"><a href="#10-什么是事件冒泡？如何阻止？" class="headerlink" title="10.什么是事件冒泡？如何阻止？"></a>10.什么是事件冒泡？如何阻止？</h2><!--more-->
-<h2 id="11-JS中定义对象的方法有哪些？"><a href="#11-JS中定义对象的方法有哪些？" class="headerlink" title="11.JS中定义对象的方法有哪些？"></a>11.JS中定义对象的方法有哪些？</h2><!--more-->
-<h2 id="12-事件绑定有哪些方法？"><a href="#12-事件绑定有哪些方法？" class="headerlink" title="12.事件绑定有哪些方法？"></a>12.事件绑定有哪些方法？</h2><!--more-->
-<h2 id="13-怎样得到一个节点的值？"><a href="#13-怎样得到一个节点的值？" class="headerlink" title="13.怎样得到一个节点的值？"></a>13.怎样得到一个节点的值？</h2><!--more-->
-<h2 id="14-如何消除数组中的重复元素"><a href="#14-如何消除数组中的重复元素" class="headerlink" title="14.如何消除数组中的重复元素"></a>14.如何消除数组中的重复元素</h2><!--more-->
-<h2 id="15-如何统计字符串中某个字符的个数？"><a href="#15-如何统计字符串中某个字符的个数？" class="headerlink" title="15.如何统计字符串中某个字符的个数？"></a>15.如何统计字符串中某个字符的个数？</h2><!--more-->
-<h2 id="16-伪数组如何转换成标准数组？"><a href="#16-伪数组如何转换成标准数组？" class="headerlink" title="16.伪数组如何转换成标准数组？"></a>16.伪数组如何转换成标准数组？</h2><!--more-->
-<h2 id="17-快速排序如何实现？"><a href="#17-快速排序如何实现？" class="headerlink" title="17.快速排序如何实现？"></a>17.快速排序如何实现？</h2><!--more-->
-<h2 id="18-谈一下JS的作用域链，和原型链？"><a href="#18-谈一下JS的作用域链，和原型链？" class="headerlink" title="18.谈一下JS的作用域链，和原型链？"></a>18.谈一下JS的作用域链，和原型链？</h2><!--more-->
-<h2 id="19-怎样给一个对象添加属性和方法？"><a href="#19-怎样给一个对象添加属性和方法？" class="headerlink" title="19.怎样给一个对象添加属性和方法？"></a>19.怎样给一个对象添加属性和方法？</h2><!--more-->
-<h2 id="20-如何删除-添加和查找节点？"><a href="#20-如何删除-添加和查找节点？" class="headerlink" title="20.如何删除. 添加和查找节点？"></a>20.如何删除. 添加和查找节点？</h2><!--more-->
-<h2 id="21-JS跨域访问的方法有哪些？"><a href="#21-JS跨域访问的方法有哪些？" class="headerlink" title="21.JS跨域访问的方法有哪些？"></a>21.JS跨域访问的方法有哪些？</h2><!--more-->
-<h2 id="22-我们给一个DOM同时绑定两个点击事件，一个用捕获一个用冒泡会执行几次事件会先执行哪种？"><a href="#22-我们给一个DOM同时绑定两个点击事件，一个用捕获一个用冒泡会执行几次事件会先执行哪种？" class="headerlink" title="22.我们给一个DOM同时绑定两个点击事件，一个用捕获一个用冒泡会执行几次事件会先执行哪种？"></a>22.我们给一个DOM同时绑定两个点击事件，一个用捕获一个用冒泡会执行几次事件会先执行哪种？</h2><!--more-->
-<h2 id="23-简述同步和异步的区别？"><a href="#23-简述同步和异步的区别？" class="headerlink" title="23.简述同步和异步的区别？"></a>23.简述同步和异步的区别？</h2><!--more-->
-<h2 id="24-一次完整的HTTP事务是怎样的过程？"><a href="#24-一次完整的HTTP事务是怎样的过程？" class="headerlink" title="24.一次完整的HTTP事务是怎样的过程？"></a>24.一次完整的HTTP事务是怎样的过程？</h2><!--more-->
-<h2 id="25-jQuery中的bind，live，delegate和on方法的区别是什么？"><a href="#25-jQuery中的bind，live，delegate和on方法的区别是什么？" class="headerlink" title="25.jQuery中的bind，live，delegate和on方法的区别是什么？"></a>25.jQuery中的bind，live，delegate和on方法的区别是什么？</h2><!--more-->
-<h2 id="26-jQuery一个对象可以同时绑定多个事件，这是如何实现的？"><a href="#26-jQuery一个对象可以同时绑定多个事件，这是如何实现的？" class="headerlink" title="26.jQuery一个对象可以同时绑定多个事件，这是如何实现的？"></a>26.jQuery一个对象可以同时绑定多个事件，这是如何实现的？</h2><!--more-->
+<h1 id="如何判断一个对象是否属于某个类？"><a href="#如何判断一个对象是否属于某个类？" class="headerlink" title="如何判断一个对象是否属于某个类？"></a>如何判断一个对象是否属于某个类？</h1><!--more-->
+<h1 id="什么是闭包？为什么要用它？"><a href="#什么是闭包？为什么要用它？" class="headerlink" title="什么是闭包？为什么要用它？"></a>什么是闭包？为什么要用它？</h1><!--more-->
+<h1 id="Js代码开头的use-strict是什么意思？"><a href="#Js代码开头的use-strict是什么意思？" class="headerlink" title="Js代码开头的use strict是什么意思？"></a>Js代码开头的use strict是什么意思？</h1><!--more-->
+<h1 id="Ajax有哪些方法？"><a href="#Ajax有哪些方法？" class="headerlink" title="Ajax有哪些方法？"></a>Ajax有哪些方法？</h1><!--more-->
+<h1 id="如何实现继承？"><a href="#如何实现继承？" class="headerlink" title="如何实现继承？"></a>如何实现继承？</h1><!--more-->
+<h1 id="如何判断数据的类型？"><a href="#如何判断数据的类型？" class="headerlink" title="如何判断数据的类型？"></a>如何判断数据的类型？</h1><!--more-->
+<h1 id="解释一下-和-的区别"><a href="#解释一下-和-的区别" class="headerlink" title="解释一下==和===的区别"></a>解释一下==和===的区别</h1><!--more-->
+<h1 id="什么是事件冒泡？如何阻止？"><a href="#什么是事件冒泡？如何阻止？" class="headerlink" title="什么是事件冒泡？如何阻止？"></a>什么是事件冒泡？如何阻止？</h1><!--more-->
+<h1 id="JS中定义对象的方法有哪些？"><a href="#JS中定义对象的方法有哪些？" class="headerlink" title="JS中定义对象的方法有哪些？"></a>JS中定义对象的方法有哪些？</h1><!--more-->
+<h1 id="事件绑定有哪些方法？"><a href="#事件绑定有哪些方法？" class="headerlink" title="事件绑定有哪些方法？"></a>事件绑定有哪些方法？</h1><!--more-->
+<h1 id="怎样得到一个节点的值？"><a href="#怎样得到一个节点的值？" class="headerlink" title="怎样得到一个节点的值？"></a>怎样得到一个节点的值？</h1><!--more-->
+<h1 id="如何消除数组中的重复元素"><a href="#如何消除数组中的重复元素" class="headerlink" title="如何消除数组中的重复元素"></a>如何消除数组中的重复元素</h1><!--more-->
+<h1 id="如何统计字符串中某个字符的个数？"><a href="#如何统计字符串中某个字符的个数？" class="headerlink" title="如何统计字符串中某个字符的个数？"></a>如何统计字符串中某个字符的个数？</h1><!--more-->
+<h1 id="伪数组如何转换成标准数组？"><a href="#伪数组如何转换成标准数组？" class="headerlink" title="伪数组如何转换成标准数组？"></a>伪数组如何转换成标准数组？</h1><!--more-->
+<h1 id="快速排序如何实现？"><a href="#快速排序如何实现？" class="headerlink" title="快速排序如何实现？"></a>快速排序如何实现？</h1><!--more-->
+<h1 id="谈一下JS的作用域链，和原型链？"><a href="#谈一下JS的作用域链，和原型链？" class="headerlink" title="谈一下JS的作用域链，和原型链？"></a>谈一下JS的作用域链，和原型链？</h1><!--more-->
+<h1 id="怎样给一个对象添加属性和方法？"><a href="#怎样给一个对象添加属性和方法？" class="headerlink" title="怎样给一个对象添加属性和方法？"></a>怎样给一个对象添加属性和方法？</h1><!--more-->
+<h1 id="如何删除-添加和查找节点？"><a href="#如何删除-添加和查找节点？" class="headerlink" title="如何删除. 添加和查找节点？"></a>如何删除. 添加和查找节点？</h1><!--more-->
+<h1 id="JS跨域访问的方法有哪些？"><a href="#JS跨域访问的方法有哪些？" class="headerlink" title="JS跨域访问的方法有哪些？"></a>JS跨域访问的方法有哪些？</h1><!--more-->
+<h1 id="我们给一个DOM同时绑定两个点击事件，一个用捕获一个用冒泡会执行几次事件会先执行哪种？"><a href="#我们给一个DOM同时绑定两个点击事件，一个用捕获一个用冒泡会执行几次事件会先执行哪种？" class="headerlink" title="我们给一个DOM同时绑定两个点击事件，一个用捕获一个用冒泡会执行几次事件会先执行哪种？"></a>我们给一个DOM同时绑定两个点击事件，一个用捕获一个用冒泡会执行几次事件会先执行哪种？</h1><!--more-->
+<h1 id="简述同步和异步的区别？"><a href="#简述同步和异步的区别？" class="headerlink" title="简述同步和异步的区别？"></a>简述同步和异步的区别？</h1><!--more-->
+<h1 id="一次完整的HTTP事务是怎样的过程？"><a href="#一次完整的HTTP事务是怎样的过程？" class="headerlink" title="一次完整的HTTP事务是怎样的过程？"></a>一次完整的HTTP事务是怎样的过程？</h1><!--more-->
+<h1 id="jQuery中的bind，live，delegate和on方法的区别是什么？"><a href="#jQuery中的bind，live，delegate和on方法的区别是什么？" class="headerlink" title="jQuery中的bind，live，delegate和on方法的区别是什么？"></a>jQuery中的bind，live，delegate和on方法的区别是什么？</h1><!--more-->
+<h1 id="jQuery一个对象可以同时绑定多个事件，这是如何实现的？"><a href="#jQuery一个对象可以同时绑定多个事件，这是如何实现的？" class="headerlink" title="jQuery一个对象可以同时绑定多个事件，这是如何实现的？"></a>jQuery一个对象可以同时绑定多个事件，这是如何实现的？</h1><!--more-->
 
       
     </div>
@@ -607,7 +604,7 @@ this表示当前对象，this的指向是根据调用的上下文来决定的，
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-介绍一下JS的基本数据类型？"><span class="nav-number">1.</span> <span class="nav-text">1.介绍一下JS的基本数据类型？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-谈谈对this的理解。"><span class="nav-number">2.</span> <span class="nav-text">2.谈谈对this的理解。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#全局变量"><span class="nav-number">2.0.1.</span> <span class="nav-text">全局变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#局部环境"><span class="nav-number">2.0.2.</span> <span class="nav-text">局部环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加分项"><span class="nav-number">2.0.3.</span> <span class="nav-text">加分项</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-如何判断一个对象是否属于某个类？"><span class="nav-number">3.</span> <span class="nav-text">3.如何判断一个对象是否属于某个类？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-什么是闭包？为什么要用它？"><span class="nav-number">4.</span> <span class="nav-text">4.什么是闭包？为什么要用它？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Js代码开头的use-strict是什么意思？"><span class="nav-number">5.</span> <span class="nav-text">5.Js代码开头的use strict是什么意思？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Ajax有哪些方法？"><span class="nav-number">6.</span> <span class="nav-text">6.Ajax有哪些方法？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-如何实现继承？"><span class="nav-number">7.</span> <span class="nav-text">7.如何实现继承？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-如何判断数据的类型？"><span class="nav-number">8.</span> <span class="nav-text">8.如何判断数据的类型？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-解释一下-和-的区别"><span class="nav-number">9.</span> <span class="nav-text">9.解释一下==和===的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-什么是事件冒泡？如何阻止？"><span class="nav-number">10.</span> <span class="nav-text">10.什么是事件冒泡？如何阻止？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-JS中定义对象的方法有哪些？"><span class="nav-number">11.</span> <span class="nav-text">11.JS中定义对象的方法有哪些？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-事件绑定有哪些方法？"><span class="nav-number">12.</span> <span class="nav-text">12.事件绑定有哪些方法？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-怎样得到一个节点的值？"><span class="nav-number">13.</span> <span class="nav-text">13.怎样得到一个节点的值？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-如何消除数组中的重复元素"><span class="nav-number">14.</span> <span class="nav-text">14.如何消除数组中的重复元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-如何统计字符串中某个字符的个数？"><span class="nav-number">15.</span> <span class="nav-text">15.如何统计字符串中某个字符的个数？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-伪数组如何转换成标准数组？"><span class="nav-number">16.</span> <span class="nav-text">16.伪数组如何转换成标准数组？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-快速排序如何实现？"><span class="nav-number">17.</span> <span class="nav-text">17.快速排序如何实现？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-谈一下JS的作用域链，和原型链？"><span class="nav-number">18.</span> <span class="nav-text">18.谈一下JS的作用域链，和原型链？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19-怎样给一个对象添加属性和方法？"><span class="nav-number">19.</span> <span class="nav-text">19.怎样给一个对象添加属性和方法？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20-如何删除-添加和查找节点？"><span class="nav-number">20.</span> <span class="nav-text">20.如何删除. 添加和查找节点？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21-JS跨域访问的方法有哪些？"><span class="nav-number">21.</span> <span class="nav-text">21.JS跨域访问的方法有哪些？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-我们给一个DOM同时绑定两个点击事件，一个用捕获一个用冒泡会执行几次事件会先执行哪种？"><span class="nav-number">22.</span> <span class="nav-text">22.我们给一个DOM同时绑定两个点击事件，一个用捕获一个用冒泡会执行几次事件会先执行哪种？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#23-简述同步和异步的区别？"><span class="nav-number">23.</span> <span class="nav-text">23.简述同步和异步的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24-一次完整的HTTP事务是怎样的过程？"><span class="nav-number">24.</span> <span class="nav-text">24.一次完整的HTTP事务是怎样的过程？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#25-jQuery中的bind，live，delegate和on方法的区别是什么？"><span class="nav-number">25.</span> <span class="nav-text">25.jQuery中的bind，live，delegate和on方法的区别是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#26-jQuery一个对象可以同时绑定多个事件，这是如何实现的？"><span class="nav-number">26.</span> <span class="nav-text">26.jQuery一个对象可以同时绑定多个事件，这是如何实现的？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#介绍一下JS的基本数据类型？"><span class="nav-number">1.</span> <span class="nav-text">介绍一下JS的基本数据类型？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#谈谈对this的理解。"><span class="nav-number">2.</span> <span class="nav-text">谈谈对this的理解。</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#全局变量"><span class="nav-number">2.1.</span> <span class="nav-text">全局变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#局部环境"><span class="nav-number">2.2.</span> <span class="nav-text">局部环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加分项"><span class="nav-number">2.3.</span> <span class="nav-text">加分项</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何判断一个对象是否属于某个类？"><span class="nav-number">3.</span> <span class="nav-text">如何判断一个对象是否属于某个类？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是闭包？为什么要用它？"><span class="nav-number">4.</span> <span class="nav-text">什么是闭包？为什么要用它？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Js代码开头的use-strict是什么意思？"><span class="nav-number">5.</span> <span class="nav-text">Js代码开头的use strict是什么意思？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ajax有哪些方法？"><span class="nav-number">6.</span> <span class="nav-text">Ajax有哪些方法？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何实现继承？"><span class="nav-number">7.</span> <span class="nav-text">如何实现继承？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何判断数据的类型？"><span class="nav-number">8.</span> <span class="nav-text">如何判断数据的类型？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解释一下-和-的区别"><span class="nav-number">9.</span> <span class="nav-text">解释一下==和===的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是事件冒泡？如何阻止？"><span class="nav-number">10.</span> <span class="nav-text">什么是事件冒泡？如何阻止？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JS中定义对象的方法有哪些？"><span class="nav-number">11.</span> <span class="nav-text">JS中定义对象的方法有哪些？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#事件绑定有哪些方法？"><span class="nav-number">12.</span> <span class="nav-text">事件绑定有哪些方法？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#怎样得到一个节点的值？"><span class="nav-number">13.</span> <span class="nav-text">怎样得到一个节点的值？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何消除数组中的重复元素"><span class="nav-number">14.</span> <span class="nav-text">如何消除数组中的重复元素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何统计字符串中某个字符的个数？"><span class="nav-number">15.</span> <span class="nav-text">如何统计字符串中某个字符的个数？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#伪数组如何转换成标准数组？"><span class="nav-number">16.</span> <span class="nav-text">伪数组如何转换成标准数组？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#快速排序如何实现？"><span class="nav-number">17.</span> <span class="nav-text">快速排序如何实现？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#谈一下JS的作用域链，和原型链？"><span class="nav-number">18.</span> <span class="nav-text">谈一下JS的作用域链，和原型链？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#怎样给一个对象添加属性和方法？"><span class="nav-number">19.</span> <span class="nav-text">怎样给一个对象添加属性和方法？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何删除-添加和查找节点？"><span class="nav-number">20.</span> <span class="nav-text">如何删除. 添加和查找节点？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JS跨域访问的方法有哪些？"><span class="nav-number">21.</span> <span class="nav-text">JS跨域访问的方法有哪些？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#我们给一个DOM同时绑定两个点击事件，一个用捕获一个用冒泡会执行几次事件会先执行哪种？"><span class="nav-number">22.</span> <span class="nav-text">我们给一个DOM同时绑定两个点击事件，一个用捕获一个用冒泡会执行几次事件会先执行哪种？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简述同步和异步的区别？"><span class="nav-number">23.</span> <span class="nav-text">简述同步和异步的区别？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一次完整的HTTP事务是怎样的过程？"><span class="nav-number">24.</span> <span class="nav-text">一次完整的HTTP事务是怎样的过程？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jQuery中的bind，live，delegate和on方法的区别是什么？"><span class="nav-number">25.</span> <span class="nav-text">jQuery中的bind，live，delegate和on方法的区别是什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jQuery一个对象可以同时绑定多个事件，这是如何实现的？"><span class="nav-number">26.</span> <span class="nav-text">jQuery一个对象可以同时绑定多个事件，这是如何实现的？</span></a></li></ol></div>
             
 
           </div>
